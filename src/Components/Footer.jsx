@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Footer() {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -10,13 +10,20 @@ function Footer() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your logic to handle the subscription, e.g., make an API call
-    console.log('Email submitted:', email);
+    console.log("Email submitted:", email);
     // Clear the input field after submission
-    setEmail('');
+    setEmail("");
   };
 
   return (
     <div className="container-fluid bg-white text-black">
+      <div>
+        <h3>Become a Member</h3>
+        <p>
+          Join our community as a member to unlock exclusive content, engage in
+          discussions, and connect with fellow enthusiasts.
+        </p>
+      </div>
       <footer className="text-center">
         <div className="container p-2 pb-0">
           <section>
@@ -39,6 +46,7 @@ function Footer() {
                     />
                   </div>
                 </div>
+
                 <div className="col-auto">
                   <button type="submit" className="btn btn-primary mb-4">
                     Subscribe
@@ -48,7 +56,11 @@ function Footer() {
             </form>
           </section>
         </div>
-        <div className="text-center text-dark p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.3)', margin: '-10px' }}>
+
+        <div
+          className="text-center text-dark p-3"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.3)", margin: "-10px" }}
+        >
           © 2023 Copyright:
           <a className="text-dark" href="http://localhost:3000">
             Adventure.com
